@@ -1,11 +1,13 @@
-# My Website
+# Dean Smith Photography
 
-A simple static website ready to publish with GitHub Pages.
+A simple static website for Dean Smith Photography, focused on waterfalls,
+nature, landscapes, and slow-shutter water photography.
 
 ## Customize
 
 - Edit `index.html` to update the page content.
 - Edit `style.css` to change colors, spacing, and layout.
+- Replace the stylized gallery placeholders with Dean's actual nature photos.
 
 ## Publish With GitHub Pages
 

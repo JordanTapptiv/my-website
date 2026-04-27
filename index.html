@@ -3,61 +3,110 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My Website</title>
+    <meta
+      name="description"
+      content="Dean Smith Photography in Lititz, Pennsylvania, featuring fine art nature, waterfalls, landscapes, and slow-shutter water photography."
+    />
+    <title>Dean Smith Photography</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="/">My Website</a>
+      <a class="brand" href="/">Dean Smith Photography</a>
       <nav aria-label="Primary navigation">
+        <a href="#gallery">Gallery</a>
         <a href="#about">About</a>
-        <a href="#work">Work</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-art" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <div class="hero-content">
-          <p class="eyebrow">Simple site, live on GitHub Pages</p>
-          <h1 id="hero-title">Build something small, polished, and yours.</h1>
+          <p class="eyebrow">Fine art photography from Lititz, Pennsylvania</p>
+          <h1 id="hero-title">Waterfalls, quiet trails, and the movement of light.</h1>
           <p>
-            This starter website is ready to customize with your own name,
-            projects, photos, and links.
+            Dean Smith photographs the natural world with an eye for flowing
+            water, textured landscapes, and everyday scenes worth slowing down
+            to see.
           </p>
-          <a class="button" href="#contact">Get in touch</a>
+          <a class="button" href="#gallery">View the nature gallery</a>
         </div>
       </section>
 
-      <section id="about" class="section">
-        <h2>About</h2>
+      <section id="gallery" class="section gallery-section" aria-labelledby="gallery-title">
+        <div class="section-heading">
+          <p class="eyebrow">Featured focus</p>
+          <h2 id="gallery-title">Waterfalls & Nature</h2>
+          <p>
+            The Facebook page includes a mix of work. This website is shaped
+            around the nature side of the portfolio, especially slow-shutter
+            images of water.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="photo-card water">
+            <div class="photo-placeholder"></div>
+            <figcaption>
+              <strong>Waterfall Studies</strong>
+              <span>Long-exposure water, rock, and woodland scenes.</span>
+            </figcaption>
+          </figure>
+          <figure class="photo-card forest">
+            <div class="photo-placeholder"></div>
+            <figcaption>
+              <strong>Woodland Light</strong>
+              <span>Quiet trails, leaves, streams, and changing seasons.</span>
+            </figcaption>
+          </figure>
+          <figure class="photo-card landscape">
+            <div class="photo-placeholder"></div>
+            <figcaption>
+              <strong>Pennsylvania Landscapes</strong>
+              <span>Local views from Lititz, Lancaster County, and beyond.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="about" class="section about-section" aria-labelledby="about-title">
+        <div>
+          <p class="eyebrow">Behind the camera</p>
+          <h2 id="about-title">A place for whatever catches the eye.</h2>
+          <p>
+            Dean Smith Photography began as a place to share the scenes Dean
+            happens to be aiming his camera at, from event photography and
+            mission trips to Peru to slow-shutter images of water.
+          </p>
+          <p>
+            This first version highlights his nature work so visitors can get a
+            clean, focused introduction before browsing the full Facebook page.
+          </p>
+        </div>
+        <img src="profile.jpg" alt="Dean Smith" />
+      </section>
+
+      <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Follow Dean Smith Photography</h2>
         <p>
-          Use this space to introduce yourself, your business, your project, or
-          whatever you want the world to know.
+          For current posts, recent images, and direct messages, visit Dean's
+          photography page on Facebook.
         </p>
-      </section>
-
-      <section id="work" class="section feature-grid">
-        <article>
-          <h2>What I Do</h2>
-          <p>
-            Highlight your services, portfolio pieces, writing, research, or
-            favorite projects.
-          </p>
-        </article>
-        <article>
-          <h2>Why It Matters</h2>
-          <p>
-            Add a short note about your style, values, goals, or the audience
-            you want to reach.
-          </p>
-        </article>
-      </section>
-
-      <section id="contact" class="section contact">
-        <h2>Contact</h2>
-        <p>Replace this with your email, social profile, or booking link.</p>
-        <a href="mailto:hello@example.com">hello@example.com</a>
+        <div class="contact-actions">
+          <a class="button" href="https://www.facebook.com/DeanSmithLititzPhotography/">
+            Open Facebook page
+          </a>
+          <a class="text-link" href="https://www.instagram.com/dean_photos_smith/">
+            Instagram: @dean_photos_smith
+          </a>
+        </div>
       </section>
     </main>
   </body>
