@@ -7,6 +7,7 @@ waterfalls, nature, landscapes, and slow-shutter water photography.
 
 - Edit `index.html` to update the page content.
 - Edit `style.css` to change colors, spacing, and layout.
+- Edit `script.js` to adjust the portfolio lightbox behavior.
 - Replace the placeholder gallery images in `assets/` with Dean's actual nature
   photos.
 

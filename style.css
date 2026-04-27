@@ -28,6 +28,10 @@ body {
   line-height: 1.55;
 }
 
+body.lightbox-open {
+  overflow: hidden;
+}
+
 a {
   color: inherit;
 }
@@ -204,9 +208,15 @@ p {
 .tile {
   position: relative;
   min-height: 0;
+  padding: 0;
   overflow: hidden;
   border-radius: 8px;
+  border: 0;
   background: var(--deep);
+  color: inherit;
+  cursor: zoom-in;
+  font: inherit;
+  text-align: left;
 }
 
 .tile-large {
@@ -243,7 +253,7 @@ p {
   transform: scale(1.035);
 }
 
-.tile figcaption {
+.tile span {
   position: absolute;
   left: 16px;
   right: 16px;
@@ -251,6 +261,101 @@ p {
   z-index: 1;
   color: #fffdf8;
   font-weight: 800;
+}
+
+.tile:focus-visible {
+  outline: 3px solid var(--water);
+  outline-offset: 3px;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: minmax(48px, 1fr) minmax(0, 1180px) minmax(48px, 1fr);
+  align-items: center;
+  padding: 32px;
+  background: rgba(9, 13, 11, 0.92);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-frame {
+  grid-column: 2;
+  justify-self: center;
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  width: min(100%, 1120px);
+  margin: 0;
+}
+
+.lightbox-frame img {
+  max-width: 100%;
+  max-height: min(78vh, 820px);
+  display: block;
+  border-radius: 4px;
+  object-fit: contain;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+.lightbox-frame figcaption {
+  color: #fffdf8;
+  font-weight: 800;
+}
+
+.lightbox-close,
+.lightbox-arrow {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fffdf8;
+  cursor: pointer;
+  font: inherit;
+}
+
+.lightbox-close:hover,
+.lightbox-arrow:hover,
+.lightbox-close:focus-visible,
+.lightbox-arrow:focus-visible {
+  background: rgba(255, 255, 255, 0.18);
+  outline: none;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  min-height: 42px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.lightbox-prev {
+  left: 24px;
+}
+
+.lightbox-next {
+  right: 24px;
 }
 
 .contact {
@@ -337,5 +442,35 @@ p {
   .tile-tall {
     grid-column: span 1;
     grid-row: span 1;
+  }
+
+  .lightbox {
+    grid-template-columns: 1fr;
+    padding: 72px 14px 28px;
+  }
+
+  .lightbox-frame {
+    grid-column: 1;
+  }
+
+  .lightbox-arrow {
+    top: auto;
+    bottom: 20px;
+    width: 46px;
+    height: 46px;
+    transform: none;
+    font-size: 2rem;
+  }
+
+  .lightbox-prev {
+    left: 16px;
+  }
+
+  .lightbox-next {
+    right: 16px;
+  }
+
+  .lightbox-frame img {
+    max-height: 70vh;
   }
 }

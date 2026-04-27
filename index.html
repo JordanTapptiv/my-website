@@ -54,31 +54,67 @@
           </p>
         </div>
 
-        <div class="photo-grid">
-          <figure class="tile tile-large">
+        <div class="photo-grid" aria-label="Photography portfolio">
+          <button
+            class="tile tile-large"
+            type="button"
+            data-src="assets/waterfall-01.jpg"
+            data-caption="Falling Water"
+            data-alt="Waterfall flowing through a rocky forest"
+          >
             <img src="assets/waterfall-01.jpg" alt="Waterfall flowing through a rocky forest" />
-            <figcaption>Falling Water</figcaption>
-          </figure>
-          <figure class="tile tile-tall">
+            <span>Falling Water</span>
+          </button>
+          <button
+            class="tile tile-tall"
+            type="button"
+            data-src="assets/forest-01.jpg"
+            data-caption="Among the Trees"
+            data-alt="Tall trees in a green forest"
+          >
             <img src="assets/forest-01.jpg" alt="Tall trees in a green forest" />
-            <figcaption>Among the Trees</figcaption>
-          </figure>
-          <figure class="tile">
+            <span>Among the Trees</span>
+          </button>
+          <button
+            class="tile"
+            type="button"
+            data-src="assets/stream-01.jpg"
+            data-caption="Still Air"
+            data-alt="Mountain lake and evergreen landscape"
+          >
             <img src="assets/stream-01.jpg" alt="Mountain lake and evergreen landscape" />
-            <figcaption>Still Air</figcaption>
-          </figure>
-          <figure class="tile tile-wide">
+            <span>Still Air</span>
+          </button>
+          <button
+            class="tile tile-wide"
+            type="button"
+            data-src="assets/waterfall-02.jpg"
+            data-caption="Morning Range"
+            data-alt="Misty mountain landscape at sunrise"
+          >
             <img src="assets/waterfall-02.jpg" alt="Misty mountain landscape at sunrise" />
-            <figcaption>Morning Range</figcaption>
-          </figure>
-          <figure class="tile">
+            <span>Morning Range</span>
+          </button>
+          <button
+            class="tile"
+            type="button"
+            data-src="assets/waterfall-03.jpg"
+            data-caption="Open Country"
+            data-alt="Mountain and lake landscape"
+          >
             <img src="assets/waterfall-03.jpg" alt="Mountain and lake landscape" />
-            <figcaption>Open Country</figcaption>
-          </figure>
-          <figure class="tile tile-wide">
+            <span>Open Country</span>
+          </button>
+          <button
+            class="tile tile-wide"
+            type="button"
+            data-src="assets/nature-01.jpg"
+            data-caption="Light Finds a Way"
+            data-alt="Sunlight over a forested mountain valley"
+          >
             <img src="assets/nature-01.jpg" alt="Sunlight over a forested mountain valley" />
-            <figcaption>Light Finds a Way</figcaption>
-          </figure>
+            <span>Light Finds a Way</span>
+          </button>
         </div>
       </section>
 
@@ -101,5 +137,21 @@
         </div>
       </section>
     </main>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+      <button class="lightbox-close" type="button" aria-label="Close image viewer">Close</button>
+      <button class="lightbox-arrow lightbox-prev" type="button" aria-label="Previous image">
+        &#8249;
+      </button>
+      <figure class="lightbox-frame">
+        <img src="" alt="" id="lightbox-image" />
+        <figcaption id="lightbox-caption"></figcaption>
+      </figure>
+      <button class="lightbox-arrow lightbox-next" type="button" aria-label="Next image">
+        &#8250;
+      </button>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
